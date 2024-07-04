@@ -8,7 +8,7 @@ class SingleTripFareCalculator implements FareCalculator {
     @Override
     public double calculateFare(int distance) {
         if (distance > DISTANCE_WITH_BASE_PRICE) {
-            return BASE_PRICE + ((distance - BASE_PRICE) * PER_KM_PRICE);
+            return BASE_PRICE + ((distance - DISTANCE_WITH_BASE_PRICE) * PER_KM_PRICE);
         }
         return BASE_PRICE;
     }
